@@ -40,7 +40,7 @@ export async function getServerData({ headers }) {
   console.log(`func headers`, JSON.stringify(headers))
   try {
     const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
-    console.log(JSON.stringify(res.headers))
+    console.log(`res headers`, JSON.stringify({...res, _request: null}))
     if (!res.ok) {
       throw new Error(`Response failed`)
     }

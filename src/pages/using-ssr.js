@@ -36,8 +36,8 @@ export const Head = () => <Seo title="Using SSR" />
 
 export default UsingSSR
 
-export async function getServerData({ headers }) {
-  console.log(`func headers`, JSON.stringify(headers))
+export async function getServerData(obj) {
+  console.log(`func headers`, JSON.stringify(obj))
   try {
     const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
     console.log(`res headers`, JSON.stringify(res))
